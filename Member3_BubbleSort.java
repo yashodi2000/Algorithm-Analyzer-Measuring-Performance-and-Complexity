@@ -9,8 +9,13 @@ public class Member3_BubbleSort {
         int[] sizes = {100, 500, 1000};
         for (int size : sizes) {
             int[] arr = generateRandomArray(size);
+
+            long startTime = System.nanoTime();
             bubbleSort(arr);
-            System.out.println("Sorted array of size: " + size);
+            long endTime = System.nanoTime();
+
+            double timeTaken = (endTime - startTime) / 1_000_000.0;
+            System.out.printf("%-10d | %.4f%n", size, timeTaken);
         }
     }
 
