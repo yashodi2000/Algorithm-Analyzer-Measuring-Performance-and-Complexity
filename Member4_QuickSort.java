@@ -8,3 +8,11 @@ public class Member4_QuickSort {
 
         int[] sizes = {100, 500, 1000};
         for (int size : sizes) {
+            int[] arr = generateRandomArray(size);
+            long startTime = System.nanoTime();
+            quickSort(arr, 0, arr.length - 1);
+            long endTime = System.nanoTime();
+            double timeTaken = (endTime - startTime) / 1_000_000.0;
+            System.out.printf("%-10d | %.4f%n", size, timeTaken);
+        }
+    }
