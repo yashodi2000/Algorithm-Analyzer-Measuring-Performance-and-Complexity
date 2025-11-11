@@ -17,3 +17,11 @@ public class Member1_LinearSearch {
             System.out.printf("%-10d | %.4f%n", size, timeTaken);
         }
     }
+
+    public static int linearSearch(int[] arr, int target) {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == target)
+                return i;
+        }
+        return -1;
+    }
